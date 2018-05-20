@@ -1,0 +1,55 @@
+/*重置滚动条样式*/
+
+html {
+  /*三角箭头的颜色*/
+  scrollbar-arrow-color: #c2c2c2;
+  /*滚动条滑块按钮的颜色*/
+  scrollbar-face-color: #c2c2c2;
+  /*滚动条整体颜色*/
+  scrollbar-highlight-color: #ffffff;
+  /*滚动条阴影*/
+  scrollbar-shadow-color: #c2c2c2;
+  /*滚动条轨道颜色*/
+  scrollbar-track-color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  /*滚动条整体部分*/
+  width: 8px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  /*滚动条的轨道*/
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  /*滚动条的滑块按钮*/
+  border-radius: 0;
+  background-color: #c2c2c2;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /*滚动条的滑块按钮hover*/
+  background-color: #a0a0a0;
+}
+
+::-webkit-scrollbar-button {
+  /*滚动条的上下两端的按钮*/
+  height: 0;
+  background-color: #ffffff;
+}
+.pointer {
+  cursor: pointer;
+}
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: 0;
+  outline-offset: 0;
+}

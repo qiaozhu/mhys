@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>美和易思</title>
+    <meta name="description" content="美和易思">
+    <meta name="keywords" content="美和易思">
+    <meta name="author" content="qz">
+
+    <link href="./image/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <!-- <link href="./css/hover.min.css" rel="stylesheet" />-->
+    <!-- <link href="./css/animate.css" rel="stylesheet" /> -->
+    <link href="./css/common.css" rel="stylesheet" />
+    <link href="./css/index.css" rel="stylesheet" />
+    <style>
+        .mhys-nav {
+            min-height: 90px;
+            position: relative;
+            background: transparent;
+            margin-bottom: 0;
+            border: 0;
+        }
+
+        .navbar-default .navbar-toggle:focus,
+        .navbar-default .navbar-toggle:hover {
+            background: transparent;
+        }
+
+        .mhys-nav.navbar-default .navbar-toggle {
+            border: none;
+            margin-top: 27px;
+        }
+
+        .mhys-nav.navbar-default .navbar-toggle .icon-bar {
+            background-color: #063f6e;
+        }
+
+        .mhys-brand {
+            height: 50px;
+            margin: 20px 0;
+            margin-left: 0px !important;
+            padding: 0px;
+            display: block;
+        }
+
+        .mhys-nav.navbar-default .navbar-nav>li>a:focus,
+        .mhys-nav.navbar-default .navbar-nav>li>a:hover {
+            color: #00c1b8;
+            background-color: transparent;
+        }
+
+        .mhys-nav.navbar-default .navbar-nav>.active>a,
+        .mhys-nav.navbar-default .navbar-nav>.active>a:focus,
+        .mhys-nav.navbar-default .navbar-nav>.active>a:hover {
+            color: #00c1b8;
+            background-color: transparent;
+        }
+
+        .mhys-nav.navbar-default .navbar-nav>.open>a,
+        .mhys-nav.navbar-default .navbar-nav>.open>a:focus,
+        .mhys-nav.navbar-default .navbar-nav>.open>a:hover {
+            color: #00c1b8;
+            background-color: transparent;
+        }
+
+
+
+        @media (min-width: 768px) {
+            .mhys-nav .navbar-nav {
+                margin-left: 30px;
+            }
+            .navbar-default .navbar-nav>li>a {
+                color: #FFFFFF;
+                transition: all 0.5s;
+            }
+            .mhys-nav .nav>li>a {
+                padding-top: 0px;
+                padding-bottom: 0px;
+                font-size: 16px;
+                margin-top: 34px;
+            }
+            .mhys-main-banner .cover-image {
+                width: 100%;
+                margin-top: -90px;
+            }
+        }
+
+
+
+        .hover_nav.dropdown-menu {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: 1px solid #e4eaec;
+            min-width: 80px;
+            top: 100px;
+            transition: top 0.5s;
+        }
+
+        .hover_nav.dropdown-menu.shownav {
+            top: 70px;
+        }
+
+        .hover_nav.dropdown-menu:after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            border: 1px solid #e4eaec;
+            border-right: 0;
+            border-bottom: 0;
+            background: #fff;
+            position: absolute;
+            top: -7px;
+            left: 50%;
+            margin-left: -7px;
+            transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        .hover_nav.dropdown-menu>li {
+            display: block;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .hover_nav.dropdown-menu>li>a {
+            display: block;
+            color: #333;
+            font-size: 15px;
+            padding: 3px 25px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 300px;
+            text-decoration: none;
+            width: 100%;
+            line-height: 30px;
+        }
+
+        .hover_nav.dropdown-menu>li>a:hover {
+            color: #00c1b8;
+        }
+
+        .mhys-main-banner {
+            height: 700px;
+            overflow: hidden;
+        }
+
+        .mhys-main-banner .cover-image {
+            width: 100%;
+        }
+
+
+        .pro-schems-col {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .pro-schems-item {
+            text-align: center;
+        }
+
+        .item-box-bg {
+            width: 129px;
+            height: 144px;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 20px;
+            background: url(./image/pro-itembg.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .item-box-bg img {
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .box-line-c {
+                position: absolute;
+                width: 0;
+                height: 80%;
+                border-left: 1px solid #d4d0d0;
+                border-right: 1px solid #FFF;
+            }
+            .box-line-c.line-r {
+                top: 0;
+                right: 0;
+            }
+            .box-line-s {
+                position: absolute;
+                width: 80%;
+                height: 0;
+                border-top: 1px solid #FFF;
+                border-bottom: 1px solid #d4d0d0;
+            }
+        }
+
+
+
+
+        .schems-item-title {
+            font-weight: 700;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .schems-item-subtitle {
+            margin-bottom: 20px;
+            color: #9E9E9E;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mhys-main-banner">
+        <nav class="navbar navbar-default mhys-nav">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- <a class="navbar-brand" href="#"  target="_self">Brand</a> -->
+                    <img class="navbar-brand mhys-brand" src="./image/header-log.png">
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#" target="_self" title="首页">首页</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" target="_self" class="dropdown-toggle mhys-toggle" role="button" aria-haspopup="true" aria-expanded="false" title="美和易思">美和易思
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu hover_nav">
+                                <li>
+                                    <a href="#" target="_self">关于我们</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self">组织架构</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self">企业文化</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self">党建工作</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" target="_self" class="dropdown-toggle mhys-toggle" role="button" aria-haspopup="true" aria-expanded="false" title="新闻动态">新闻动态
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu hover_nav">
+                                <li>
+                                    <a href="#" target="_self">公司新闻</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self">院校新闻</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self">行业新闻</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self">媒体报道</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" target="_self" class="dropdown-toggle mhys-toggle" role="button" aria-haspopup="true" aria-expanded="false" title="产品方案">产品方案
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu hover_nav">
+                                <li>
+                                    <a href="#" target="_self">教学科研一体机</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self">教育行业软件平台</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self">智能硬件</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" target="_self" class="dropdown-toggle mhys-toggle" role="button" aria-haspopup="true" aria-expanded="false" title="产教融合">产教融合
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu hover_nav">
+                                <li>
+                                    <a href="#" target="_self">业务简介</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self">合作模式</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self">合作优势</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self">培养方向</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" target="_self" class="dropdown-toggle mhys-toggle" role="button" aria-haspopup="true" aria-expanded="false" title="招贤纳士">招贤纳士
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu hover_nav">
+                                <li>
+                                    <a href="#" target="_self">工作环境</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self">公司总部招聘</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self">合作院校招聘</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="联系我们">联系我们</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" target="_self" class="dropdown-toggle mhys-toggle" role="button" aria-haspopup="true" aria-expanded="false" title="旗下网站">旗下网站
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu hover_nav">
+                                <li>
+                                    <a href="#" target="_self">MOOT教学平台</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self">学生证书查询系统</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self">讲师证书查询系统</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <img src="./image/index-banner.jpg" class="cover-image" alt="">
+    </div>
+
+    <div class="mhys-module module-product">
+        <div class="mhys-module-title">
+            <h2>产品方案
+                <small class="text-uppercase">product scmese</small>
+            </h2>
+            <div class="title-icon"></div>
+        </div>
+        <div class="container product-container">
+            <div class="row">
+                <div class="col-md-4 pro-schems-col">
+                    <div class="pro-schems-item">
+                        <a href="#" target="_self">
+                            <div class="item-box-bg">
+                                <img src="./image/pro-item1.png" alt="" style="margin-top: 24px">
+                            </div>
+                        </a>
+                        <div class="schems-item-title">高校人脸识别智能考勤系统</div>
+                        <div class="schems-item-subtitle">紫牛程序员 人才培养特色</div>
+                    </div>
+                    <div class="box-line-c" style="right: 0;top: 10%;"></div>
+                    <div class="box-line-s" style="bottom: 0;left: 10%;"></div>
+                </div>
+                <div class="col-md-4 pro-schems-col">
+                    <div class="pro-schems-item">
+                        <a href="#" target="_self">
+                            <div class="item-box-bg">
+                                <img src="./image/pro-item2.png" alt="" style="margin-top: 24px">
+                            </div>
+                        </a>
+                        <div class="schems-item-title">高校人脸识别智能考勤系统</div>
+                        <div class="schems-item-subtitle">紫牛程序员 人才培养特色</div>
+                    </div>
+                    <div class="box-line-c" style="right: 0;top: 10%;"></div>
+                    <div class="box-line-s" style="bottom: 0;left: 10%;"></div>
+                </div>
+                <div class="col-md-4 pro-schems-col">
+                    <div class="pro-schems-item">
+                        <a href="#" target="_self">
+                            <div class="item-box-bg">
+                                <img src="./image/pro-item3.png" alt="" style="margin-top: 12px">
+                            </div>
+                        </a>
+                        <div class="schems-item-title">高校人脸识别智能考勤系统</div>
+                        <div class="schems-item-subtitle">紫牛程序员 人才培养特色</div>
+                    </div>
+                    <div class="box-line-s" style="bottom: 0;left: 10%;"></div>
+                </div>
+                <div class="col-md-4 pro-schems-col">
+                    <div class="pro-schems-item">
+                        <a href="#" target="_self">
+                            <div class="item-box-bg">
+                                <img src="./image/pro-item4.png" alt="" style="margin-top: 24px">
+                            </div>
+                        </a>
+                        <div class="schems-item-title">高校人脸识别智能考勤系统</div>
+                        <div class="schems-item-subtitle">紫牛程序员 人才培养特色</div>
+                    </div>
+                    <div class="box-line-c" style="right: 0;top: 10%;"></div>
+                </div>
+                <div class="col-md-4 pro-schems-col">
+                    <div class="pro-schems-item">
+                        <a href="#" target="_self">
+                            <div class="item-box-bg">
+                                <img src="./image/pro-item5.png" alt="" style="margin-top: 23px">
+                            </div>
+                        </a>
+                        <div class="schems-item-title">高校人脸识别智能考勤系统</div>
+                        <div class="schems-item-subtitle">紫牛程序员 人才培养特色</div>
+                    </div>
+                    <div class="box-line-c" style="right: 0;top: 10%;"></div>
+                </div>
+                <div class="col-md-4 pro-schems-col">
+                    <div class="pro-schems-item">
+                        <a href="#" target="_self">
+                            <div class="item-box-bg">
+                                <img src="./image/pro-item6.png" alt="" style="margin-top: 26px">
+                            </div>
+                        </a>
+                        <div class="schems-item-title">高校人脸识别智能考勤系统</div>
+                        <div class="schems-item-subtitle">紫牛程序员 人才培养特色</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mhys-module module-proedu">
+        <div class="module-proedu-bg">
+            <img src="./image/index-cjrh-bg.jpg" alt="...">
+        </div>
+        <div class="mhys-module-title" style="background: transparent;margin-top: -400px;">
+            <h2 style="margin-top: 0;padding-top: 20px;color:#FFFFFF">产教融合
+                <small class="text-uppercase" style="color:#FFFFFF">integration of production and education</small>
+            </h2>
+            <div class="title-icon" style="background:#FFFFFF"></div>
+        </div>
+        <div class="container">
+            <div class="row proedu-row">
+                <div class="col-md-4 proedu-border-right">
+                    <div class="proedu-item-imgbox">
+                        <img src="./image/proedu-item-img1.png" alt="..." class="proedu-item-img">
+                    </div>
+                    <div class="proedu-item-titlebox">
+                        <p class="title-tone">专科院校</p>
+                        <p class="title-icon"></p>
+                        <p class="title-tsub">紫牛程序员</p>
+                    </div>
+                    <div class="proedu-item-dialog">
+                        <div class="proedu-dialog-topbg">
+                            <p class="proedu-dialog-title">鲲鹏工程师</p>
+                            <p class="proedu-dialog-content">软件工程专业 云计算专业 大数据专业 物联网工程软件工程专业 软件工程专业 云计算专业 大数据专业 物联网工程软件工程专业 软件工程专业 云计算专业 大数据专业 物联网工程软件工程专业
+                            </p>
+                        </div>
+                        <div class="proedu-dialog-specbox clearfix ">
+                            <div class="specbox-item">
+                                <div class="specbox-item-imgbg">
+                                    <img src="./image/pro-item1.png" alt="">
+                                </div>
+                                <div class="specbox-item-title">转件工程专业</div>
+                            </div>
+                            <div class="specbox-item">
+                                <div class="specbox-item-imgbg">
+                                    <img src="./image/pro-item1.png" alt="">
+                                </div>
+                                <div class="specbox-item-title">转件工程专业</div>
+                            </div>
+                            <div class="specbox-item">
+                                <div class="specbox-item-imgbg">
+                                    <img src="./image/pro-item1.png" alt="">
+                                </div>
+                                <div class="specbox-item-title">转件工程专业</div>
+                            </div>
+                            <div class="specbox-item">
+                                <div class="specbox-item-imgbg">
+                                    <img src="./image/pro-item1.png" alt="">
+                                </div>
+                                <div class="specbox-item-title">转件工程专业</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 proedu-border-right">
+                    <div class="proedu-item-imgbox">
+                        <img src="./image/proedu-item-img1.png" alt="..." class="proedu-item-img">
+                    </div>
+                    <div class="proedu-item-titlebox">
+                        <p class="title-tone">专科院校</p>
+                        <p class="title-icon"></p>
+                        <p class="title-tsub">紫牛程序员</p>
+                    </div>
+                    <div class="proedu-item-dialog">
+                        <div class="proedu-dialog-topbg">
+                            <p class="proedu-dialog-title">鲲鹏工程师</p>
+                            <p class="proedu-dialog-content">软件工程专业 云计算专业 大数据专业 物联网工程软件工程专业 软件工程专业 云计算专业 大数据专业 物联网工程软件工程专业 软件工程专业 云计算专业 大数据专业 物联网工程软件工程专业
+                            </p>
+                        </div>
+                        <div class="proedu-dialog-specbox clearfix ">
+                            <div class="specbox-item">
+                                <div class="specbox-item-imgbg">
+                                    <img src="./image/pro-item1.png" alt="">
+                                </div>
+                                <div class="specbox-item-title">转件工程专业</div>
+                            </div>
+                            <div class="specbox-item">
+                                <div class="specbox-item-imgbg">
+                                    <img src="./image/pro-item1.png" alt="">
+                                </div>
+                                <div class="specbox-item-title">转件工程专业</div>
+                            </div>
+                            <div class="specbox-item">
+                                <div class="specbox-item-imgbg">
+                                    <img src="./image/pro-item1.png" alt="">
+                                </div>
+                                <div class="specbox-item-title">转件工程专业</div>
+                            </div>
+                            <div class="specbox-item">
+                                <div class="specbox-item-imgbg">
+                                    <img src="./image/pro-item1.png" alt="">
+                                </div>
+                                <div class="specbox-item-title">转件工程专业</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="proedu-item-imgbox">
+                        <img src="./image/proedu-item-img1.png" alt="..." class="proedu-item-img">
+                    </div>
+                    <div class="proedu-item-titlebox">
+                        <p class="title-tone">专科院校</p>
+                        <p class="title-icon"></p>
+                        <p class="title-tsub">紫牛程序员</p>
+                    </div>
+                    <div class="proedu-item-dialog">
+                        <div class="proedu-dialog-topbg">
+                            <p class="proedu-dialog-title">鲲鹏工程师</p>
+                            <p class="proedu-dialog-content">软件工程专业 云计算专业 大数据专业 物联网工程软件工程专业 软件工程专业 云计算专业 大数据专业 物联网工程软件工程专业 软件工程专业 云计算专业 大数据专业 物联网工程软件工程专业
+                            </p>
+                        </div>
+                        <div class="proedu-dialog-specbox clearfix ">
+                            <div class="specbox-item">
+                                <div class="specbox-item-imgbg">
+                                    <img src="./image/pro-item1.png" alt="">
+                                </div>
+                                <div class="specbox-item-title">转件工程专业</div>
+                            </div>
+                            <div class="specbox-item">
+                                <div class="specbox-item-imgbg">
+                                    <img src="./image/pro-item1.png" alt="">
+                                </div>
+                                <div class="specbox-item-title">转件工程专业</div>
+                            </div>
+                            <div class="specbox-item">
+                                <div class="specbox-item-imgbg">
+                                    <img src="./image/pro-item1.png" alt="">
+                                </div>
+                                <div class="specbox-item-title">转件工程专业</div>
+                            </div>
+                            <div class="specbox-item">
+                                <div class="specbox-item-imgbg">
+                                    <img src="./image/pro-item1.png" alt="">
+                                </div>
+                                <div class="specbox-item-title">转件工程专业</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mhys-module module-news">
+        <div class="mhys-module-title">
+            <h2>新闻动态
+                <small class="text-uppercase">news information</small>
+            </h2>
+            <div class="title-icon"></div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="news-type-title">总部新闻</div>
+                    <div class="row news-list-one">
+                        <div class="col-md-6">
+                            <a href="http://mhys.com.cn/html/1/53/69/253.html" target="_self">
+                                <img src="./image/zbnews.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="new-ont-title" title="美和易思党支部成立大会圆满召开">美和易思党支部成立大会圆满召开</div>
+                            <div class="new-ont-desc">美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开</div>
+                        </div>
+                        <div class="news-more">
+                            <a href="#" target="_self">READ MORE →</a>
+                        </div>
+                    </div>
+                    <div class="row news-list">
+                        <div class="col-md-9">
+                            <a class="news-title" href="#" title="美和易思党支部成立大会圆满召开" target="_self">美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开</a>
+                        </div>
+                        <div class="col-md-3 text-right">
+                            03-03
+                        </div>
+                    </div>
+                    <div class="row news-list">
+                        <div class="col-md-9">
+                            <a class="news-title" href="#" title="美和易思党支部成立大会圆满召开" target="_self">美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开</a>
+                        </div>
+                        <div class="col-md-3 text-right">
+                            03-03
+                        </div>
+                    </div>
+                    <div class="row news-list">
+                        <div class="col-md-9">
+                            <a class="news-title" href="#" title="美和易思党支部成立大会圆满召开" target="_self">美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开</a>
+                        </div>
+                        <div class="col-md-3 text-right">
+                            03-03
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="news-type-title">院校新闻</div>
+                    <div class="row news-list-one">
+                        <div class="col-md-6">
+                            <a href="http://mhys.com.cn/html/1/53/69/253.html" target="_self">
+                                <img src="./image/yxnews.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="new-ont-title" title="美和易思党支部成立大会圆满召开">美和易思党支部成立大会圆满召开</div>
+                            <div class="new-ont-desc">美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开</div>
+                        </div>
+                        <div class="news-more">
+                            <a href="#" target="_self">READ MORE →</a>
+                        </div>
+                    </div>
+                    <div class="row news-list">
+                        <div class="col-md-9 col-sm-8">
+                            <a class="news-title" href="#" title="美和易思党支部成立大会圆满召开" target="_self">美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开</a>
+                        </div>
+                        <div class="col-md-3  col-sm-4 text-right">
+                            03-03
+                        </div>
+                    </div>
+                    <div class="row news-list">
+                        <div class="col-md-9">
+                            <a class="news-title" href="#" title="美和易思党支部成立大会圆满召开" target="_self">美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开</a>
+                        </div>
+                        <div class="col-md-3 text-right">
+                            03-03
+                        </div>
+                    </div>
+                    <div class="row news-list">
+                        <div class="col-md-9">
+                            <a class="news-title" href="#" title="美和易思党支部成立大会圆满召开" target="_self">美和易思党支部成立大会圆满召开美和易思党支部成立大会圆满召开</a>
+                        </div>
+                        <div class="col-md-3 text-right">
+                            03-03
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mhys-module module-partner">
+        <div class="proedu-mask">
+            <div class="mhys-module-title" style="background: transparent;padding-bottom: 60px">
+                <h2 style="margin-top: 0;padding-top: 60px;color:#FFFFFF">合作伙伴
+                    <small class="text-uppercase">cooperative partner</small>
+                </h2>
+                <div class="title-icon"></div>
+            </div>
+            <div class="container">
+                <div class="row partner-list-row">
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <a href="https://www.baidu.com/" title="" target="_blank">
+                            <img src="./image/partner.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <a href="http://www.alibabagroup.com/cn/global/home" title="" target="_blank">
+                            <img src="./image/partner.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <a href="http://www.xfyun.cn/?ch=bdtg" title="" target="_blank">
+                            <img src="./image/partner.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <a href="https://www.kedacom.com/" title="" target="_blank">
+                            <img src="./image/partner.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <a href="https://www.megvii.com/#jzl_kwd=55193305227&amp;jzl_ctv=13379949732&amp;jzl_mtt=1&amp;jzl_adt=cl1" title="" target="_blank">
+                            <img src="./image/partner.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <a href="https://www.oracle.com/" title="" target="_blank">
+                            <img src="./image/partner.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <a href="https://aws.amazon.com" title="" target="_blank">
+                            <img src="./image/partner.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <a href="https://cloud.tencent.com/" title="" target="_blank">
+                            <img src="./image/partner.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-panel">
+        <div class="container text-center">
+            <div class="row footer-link">
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <p>美和易思</p>
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//52/94/index.html?id=1&amp;type=1" title="关于我们">关于我们</a>
+                            </p>
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//52/165/index.html?id=1&amp;type=2" title="组织架构">组织架构</a>
+                            </p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//52/97/index.html?id=1&amp;type=3" title="企业文化">企业文化</a>
+                            </p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//52/170/index.html?id=1&amp;type=4" title="党建工作">党建工作</a>
+                            </p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1/63/index.html?type=1"> 联系我们</a>
+                            </p>
+                        </div>
+                        <div class="col-md-2">
+                            <p>新闻动态</p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//53/69/index.html?id=1&amp;type=1" title="公司新闻">公司新闻</a>
+                            </p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//53/70/index.html?id=1&amp;type=2" title="院校新闻">院校新闻</a>
+                            </p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//53/68/index.html?id=1&amp;type=3" title="行业新闻">行业新闻</a>
+                            </p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//53/83/index.html?id=1&amp;type=4" title="媒体报道">媒体报道</a>
+                            </p>
+
+                        </div>
+                        <div class="col-md-2">
+                            <p>产品方案</p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//59/106/index.html?id=1&amp;type=1" title="教学科研一体机">教学科研一体机</a>
+                            </p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//59/107/index.html?id=1&amp;type=1" title="教育行业软件平台">教育行业软件平台</a>
+                            </p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//59/108/index.html?id=1&amp;type=1" title="智能硬件">智能硬件</a>
+                            </p>
+
+                        </div>
+                        <div class="col-md-2">
+                            <p>校企合作</p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//61/134/index.html?id=1&amp;type=1" title="业务简介">业务简介</a>
+                            </p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//61/166/index.html?id=1&amp;type=2" title="合作模式">合作模式</a>
+                            </p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//61/135/index.html?id=1&amp;type=3" title="合作优势">合作优势</a>
+                            </p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//61/138/index.html?id=1&amp;type=4" title="培养方向">培养方向</a>
+                            </p>
+
+                        </div>
+                        <div class="col-md-2">
+                            <p>招贤纳士</p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//62/115/index.html?id=1&amp;type=1" title="工作环境">工作环境</a>
+                            </p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//62/146/index.html?id=1&amp;type=2" title="公司总部招聘">公司总部招聘</a>
+                            </p>
+
+                            <p>
+                                <a href="http://mhys.com.cn/html/1//62/133/index.html?id=1&amp;type=3" title="合作院校招聘">合作院校招聘</a>
+                            </p>
+
+                        </div>
+                        <div class="col-md-2">
+                            <p>旗下网站</p>
+
+                            <p>
+                                <a href="http://www.51moot.cn/" target="_blank" class="" title="MOOT教学平台">MOOT教学平台</a>
+                            </p>
+                            <p>
+                                <a href="http://www.mstanford.com.cn:8086/" target="_blank" class="" title="学生证书查询系统">学生证书查询系统</a>
+                            </p>
+                            <p>
+                                <a href="http://www.mstanford.com.cn:8086/" target="_blank" class="" title="讲师证书查询系统">讲师证书查询系统</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 wx">
+                    <img class="img" width="100" height="100" src="./image/wx.jpg">
+                    <p>美和易思官方微信</p>
+                </div>
+            </div>
+            <p class="copy-right">版权所有:2008-2018 | 鄂ICP备18007700号 </p>
+        </div>
+        <div class="padding-top-60  hidden-xs hidden-sm"></div>
+        <div class="container">
+            <div class="row footer-btnpanel">
+                <div class="col-md-3 footer-logo">
+                    <img src="./image/header-log.png">
+                </div>
+                <div class="col-md-3 text-center">
+                    <p>产教融合</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <p>校企合作</p>
+                </div>
+                <div class="col-md-3 text-center pointer">
+                    <span data-toggle="modal" data-target="#myModal" class="cooperation-btn">联系合作</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 联系合作弹窗 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">联系合作</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="login.do?act=login" method="post" id="postForm" class="form-inline cooperation-form">
+                        <div class="form-group">
+                            <label class="inputlabel" for="exampleInputName1">贵校名称：</label>
+                            <input type="text" class="form-control form-width" id="exampleInputName1" name="schoolName" placeholder="请输入">
+                        </div>
+                        <div class="form-group">
+                            <label class="inputlabel">意向合作方向：</label>
+                            <div class="checkbox form-width">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="orientation1" value="J2EE高级软件开发方向">J2EE高级软件开发方向
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="orientation1" value=".NET高级软件开发方向">NET高级软件开发方向
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="orientation1" value="智能互联网开发方向">智能互联网开发方向
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="orientation1" value="环境大数据分析方向">环境大数据分析方向
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="orientation1" value="Web前端开发方向">Web前端开发方向
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="orientation1" value="电子商务运营方向">电子商务运营方向
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="inputlabel">合作方式：</label>
+                            <div class="checkbox form-width">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="mode1" value="企业进校 深度融合">企业进校 深度融合
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="mode1" value="实训基地">实训基地</td>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="inputlabel" for="exampleInputName2">您的称谓：</label>
+                            <input type="text" class="form-control form-width" id="exampleInputName2" name="name" placeholder="请输入">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 30px">
+                            <label class="inputlabel" for="exampleInputName3">您的联系方式：</label>
+                            <input type="text" class="form-control form-width" id="exampleInputName4" name="contact" placeholder="请输入">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="submit" class="btn btn-primary">确定</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="backtop" class="back-to-top">
+        <span class="glyphicon  glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+    </div>
+    <script src="./js/jquery-2.1.4.min.js "></script>
+    <script src="./js/bootstrap.min.js "></script>
+    <!-- <script src="./js/bootstrap-hover-dropdown.js"></script> -->
+    <script src="./js/jquery.blockUI.min.js "></script>
+    <script>
+        $(function () {
+
+        })
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            // 导航hover
+            var timer = null;
+            $(".mhys-toggle").on('mouseenter', function () {
+                var downDom = $(this).parent().find('.hover_nav');
+                downDom.show().css({
+                    left: $(this).width() / 2 - downDom.width() / 2 + 10 + 'px'
+                }).addClass('shownav')
+            })
+            $(".mhys-toggle").on('mouseleave', function () {
+                timer = setTimeout(() => {
+                    $(this).parent().find('.hover_nav').hide().removeClass('shownav');
+                }, 100);
+            })
+            $(".hover_nav").on('mouseenter', function () {
+                clearTimeout(timer);
+            })
+            $(".hover_nav").on('mouseleave', function () {
+                $(this).hide().removeClass('shownav');
+            })
+
+            // 产教融合hover
+            $(".proedu-item-imgbox").on('mouseenter', function () {
+                $(this).parent().find('.proedu-item-dialog').fadeIn();
+            })
+            $(".proedu-item-dialog").on('mouseleave', function () {
+                $(this).fadeOut();
+            })
+
+            // 返回顶部
+            $(window).scroll(function () {
+                if ($(window).scrollTop() >= 500) {
+                    $('.back-to-top').addClass('show');
+                } else {
+                    $('.back-to-top').removeClass('show');
+                }
+            });
+            $("#backtop").on("click", function () {
+                $(window).scrollTop(0);
+            })
+        })
+    </script>
+</body>
+
+</html>
