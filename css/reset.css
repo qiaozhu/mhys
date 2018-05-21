@@ -1,0 +1,312 @@
+@charset "utf-8";
+/*1 重定义浏览器默认样式
+	Name:			style_reset
+	Level:			Global
+	Explain:		重定义浏览器默认样式
+	Last Modify:	qz
+*/
+
+* {
+  word-wrap: break-word;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+iframe,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+button,
+input,
+textarea,
+th,
+td,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+dl {
+  list-style-type: none;
+}
+
+html,
+body {
+  *position: static;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+input,
+button {
+  overflow: visible;
+  vertical-align: middle;
+  outline: none;
+}
+
+body,
+th,
+td,
+button,
+input,
+select,
+textarea {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
+body {
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+a,
+area {
+  outline: none;
+  blr: expression(this.onFocus=this.blur());
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+  outline: none;
+}
+
+a.ie6:hover {
+  zoom: 1;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:hover,
+a:active {
+  outline: none;
+}
+
+:focus {
+  outline: none;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+}
+
+/*img*/
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+a img,
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/*IE下a:hover 背景闪烁*/
+
+html {
+  overflow: -moz-scrollbars-vertical;
+  zoom: expression(
+    function(ele) {ele.style.zoom= '1' ; document.execCommand('BackgroundImageCache', false, true)} (this)
+  );
+}
+
+/*HTML5 reset*/
+
+header,
+footer,
+section,
+aside,
+details,
+menu,
+article,
+section,
+nav,
+address,
+hgroup,
+figure,
+figcaption,
+legend {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+time {
+  display: inline;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+audio:not([controls]) {
+  display: none;
+}
+
+legend {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: 40px;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+legend small {
+  font-size: 15px;
+  color: #999;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border-width: 0;
+  padding: 0.35em 0.625em 0.75em;
+  margin: 0 2px;
+  border: 1px solid #c0c0c0;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.cl:after,
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.cl,
+.clearfix {
+  zoom: 1;
+}
+/*重置滚动条样式*/
+
+html {
+  /*三角箭头的颜色*/
+  scrollbar-arrow-color: #c2c2c2;
+  /*滚动条滑块按钮的颜色*/
+  scrollbar-face-color: #c2c2c2;
+  /*滚动条整体颜色*/
+  scrollbar-highlight-color: #ffffff;
+  /*滚动条阴影*/
+  scrollbar-shadow-color: #c2c2c2;
+  /*滚动条轨道颜色*/
+  scrollbar-track-color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  /*滚动条整体部分*/
+  width: 8px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  /*滚动条的轨道*/
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  /*滚动条的滑块按钮*/
+  border-radius: 0;
+  background-color: #c2c2c2;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /*滚动条的滑块按钮hover*/
+  background-color: #a0a0a0;
+}
+
+::-webkit-scrollbar-button {
+  /*滚动条的上下两端的按钮*/
+  height: 0;
+  background-color: #ffffff;
+}
+/* 设置字体 全平台通用 */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
