@@ -5,8 +5,13 @@
 }
 /* banner */
 .mhys-main-banner {
-  height: 700px;
   overflow: hidden;
+}
+@media (min-width: 768px) {
+  .mhys-main-banner {
+    height: 700px;
+    overflow: hidden;
+  }
 }
 
 .mhys-main-banner .cover-image {
@@ -86,6 +91,7 @@
   /* background-attachment: fixed; */
   overflow: hidden;
 }
+
 .module-proedu .mhys-module-title {
   background: transparent;
   margin-top: -400px;
@@ -165,10 +171,12 @@
 }
 .proedu-dialog-title {
   font-size: 27px;
+  margin-bottom: 10px;
 }
 .proedu-dialog-content {
   font-size: 14px;
   line-height: 24px;
+  margin-bottom: 10px;
 }
 .proedu-dialog-specbox {
   padding: 0 10px;
@@ -264,7 +272,7 @@
 
 /* 新闻动态 */
 .module-news {
-  margin-top: 160px;
+  margin-top: 80px;
   padding-bottom: 50px;
 }
 .news-type-title {
