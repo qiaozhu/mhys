@@ -27,7 +27,8 @@
 
 <body>
     <div class="mhys-main-banner">
-        <video id="my-player" class="video-js vjs-fluid" preload="auto" loop="true" poster="https://assets.megvii.com/static%2Fimages/home/megvii_video.jpg"
+        <img class="video-reading-bg" src="https://assets.megvii.com/static%2Fimages/home/megvii_video.jpg">
+        <video id="my-player" class="video-js vjs-fluid" autoplay="true" preload="auto" loop="true" poster="https://assets.megvii.com/static%2Fimages/home/megvii_video.jpg"
             data-setup='{}'>
             <source src="./video/banner.mp4" type="video/mp4"></source>
             <source src="./video/banner.webm" type="video/webm"></source>
@@ -737,6 +738,13 @@
     <script src="./js/video.min.js"></script>
     <script type="text/javascript">
         $(function () {
+            // 头部视频
+            var player = videojs('my-player', { autoplay: true }, function () {
+                // 准备就绪 隐藏默认图片 开始播放视频
+                console.log('video to go!');
+                $('.video-reading-bg').hide();
+                this.play();
+            });
             // 导航hover
             var timer = null;
             $(".mhys-toggle").on('mouseenter', function () {
@@ -796,10 +804,6 @@
             $("#backtop").on("click", function () {
                 $(window).scrollTop(0);
             })
-            var player = videojs('my-player', { autoplay: true }, function () {
-                console.log('video to go!');
-                this.play();
-            });
         })
         $(document).ready(function () {
             $('#owl-partner').owlCarousel({
