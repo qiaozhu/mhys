@@ -1,3 +1,13 @@
+#my-player:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.5);
+}
 @media (min-width: 1200px) {
   .container {
     width: 1300px;
@@ -5,11 +15,14 @@
 }
 /* banner */
 .mhys-main-banner {
-  overflow: hidden;
+  position: relative;
+}
+.mhys-main-banner video {
+  width: 100%;
 }
 @media (min-width: 768px) {
   .mhys-main-banner {
-    height: 700px;
+    min-height: 500px;
     overflow: hidden;
   }
 }
@@ -37,18 +50,25 @@
   text-align: center;
 }
 
-.item-box-bg {
+.pro-schems-item .item-box-bg {
   width: 129px;
   height: 144px;
   margin: 0 auto;
   padding: 20px;
-  background: url(../image/pro-itembg.png) no-repeat;
+  background-image: url(../image/pro-itembg.png);
+  background-repeat: no-repeat;
   background-size: 100% 100%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
-.topbg1 {
+.pro-schems-item .item-box-bg:hover {
+  background-image: url(../image/pro-itembg-hover.png);
 }
-.item-box-bg img {
+.pro-schems-item .item-box-bg img {
   width: 100%;
+}
+.pro-schems-item .item-box-bg img.hover-img {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -79,7 +99,6 @@
   font-weight: 400;
 }
 .schems-item-subtitle {
-  margin-bottom: 20px;
   color: #9e9e9e;
 }
 

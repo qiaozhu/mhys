@@ -61,11 +61,14 @@ a:hover {
 
 /* 导航begin */
 .mhys-nav {
-  min-height: 100px;
-  position: relative;
+  position: absolute;
   background: transparent;
+  width: 100%;
+  min-height: 100px;
   margin-bottom: 0;
   border: 0;
+  top: 0;
+  z-index: 2;
 }
 
 .navbar-default .navbar-toggle:focus,
@@ -83,11 +86,12 @@ a:hover {
 }
 
 .mhys-brand {
+  display: block;
   height: 50px;
   margin: 25px 0;
   margin-left: 0px !important;
   padding: 0px;
-  display: block;
+  padding-left: 15px;
 }
 
 .mhys-nav.navbar-default .navbar-nav > li > a:focus,
@@ -295,7 +299,7 @@ a:hover {
   .form-inline .radio input[type='radio'] {
     position: relative;
     margin-left: 0;
-    top: -2px;
+    top: -4px;
     margin-right: 5px;
   }
 }
