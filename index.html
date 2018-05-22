@@ -27,9 +27,10 @@
 
 <body>
     <div class="mhys-main-banner">
-        <img class="video-reading-bg" src="https://assets.megvii.com/static%2Fimages/home/megvii_video.jpg">
-        <video id="my-player" class="video-js vjs-fluid" autoplay="true" preload="auto" loop="true" poster="https://assets.megvii.com/static%2Fimages/home/megvii_video.jpg"
-            data-setup='{}'>
+        <div class="video-ready-bg aspectration" data-ratio="1280:719">
+            <img src="./image/megvii_video.jpg">
+        </div>
+        <video id="my-player" class="video-js vjs-fluid" preload="auto" autoplay loop muted poster="./image/megvii_video.jpg" data-setup='{}'>
             <source src="./video/banner.mp4" type="video/mp4"></source>
             <source src="./video/banner.webm" type="video/webm"></source>
             <source src="./video/banner.ogv" type="video/ogg"></source>
@@ -37,6 +38,7 @@
                 您的浏览器不支持播放视频，请更新至最新版本。建议使用chrome浏览器。
             </p>
         </video>
+        <!-- <img src="./image/index-banner.jpg" alt=""> -->
         <nav class="navbar navbar-default mhys-nav">
             <div class="container">
                 <div class="navbar-header">
@@ -739,12 +741,12 @@
     <script type="text/javascript">
         $(function () {
             // 头部视频
-            var player = videojs('my-player', { autoplay: true }, function () {
-                // 准备就绪 隐藏默认图片 开始播放视频
-                console.log('video to go!');
-                $('.video-reading-bg').hide();
-                this.play();
-            });
+            // var player = videojs('my-player', { autoplay: true }, function () {
+            //     // 准备就绪 隐藏默认图片 开始播放视频
+            //     console.log('video to go!');
+            //     $('.video-ready-bg').hide();
+            //     this.play();
+            // });
             // 导航hover
             var timer = null;
             $(".mhys-toggle").on('mouseenter', function () {

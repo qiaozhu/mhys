@@ -1,20 +1,46 @@
 #my-player:after {
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   z-index: 1;
   left: 0;
   top: 0;
   content: '';
-  background-color: rgba(0, 0, 0, 0.5);
 }
-.video-reading-bg{
-  display: block;
+.aspectration {
+  position: relative;
+  /*因为容器所有子元素需要绝对定位*/
+  height: 0;
+  /*容器高度是由padding来控制，盒模型原理告诉你一切*/
+  width: 100%;
+  overflow: hidden;
+}
+.aspectration > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.aspectration[data-ratio='1280:719'] {
+  padding-top: 56.171875%;
+}
+.video-ready-bg {
   position: relative;
   width: 100%;
+}
+
+.video-ready-bg img {
+  width: 100%;
+}
+.video-js {
+  position: absolute;
   top: 0;
-  z-index: 5;
-  opacity: 1;
+  background: #ffffff;
+}
+.mhys-main-banner {
+  background: transparent;
 }
 @media (min-width: 1200px) {
   .container {
@@ -30,7 +56,7 @@
 }
 @media (min-width: 768px) {
   .mhys-main-banner {
-    min-height: 500px;
+    min-height: 700px;
     overflow: hidden;
   }
 }
