@@ -295,7 +295,7 @@
                         <p class="title-icon"></p>
                         <p class="title-tsub">鲲鹏工程师</p>
                     </div>
-                    <div class="proedu-item-dialog animated slideInLeft">
+                    <div class="proedu-item-dialog animated">
                         <div class="proedu-dialog-topbg topbg1">
                             <p class="proedu-dialog-title">鲲鹏工程师</p>
                             <p class="proedu-dialog-content">鲲鹏工程师系列产品，面向本科院校计算机相关专业，以培养心智健全具有工匠精神的应用型人才为目标，涵盖软件工程、云计算、大数据、人工智能、物联网等IT技术，助力本科院校新工科专业建设与改革。
@@ -365,7 +365,7 @@
                         <p class="title-icon"></p>
                         <p class="title-tsub">飞天实训</p>
                     </div>
-                    <div class="proedu-item-dialog  animated slideInRight" style="right: 15px">
+                    <div class="proedu-item-dialog animated" style="right: 15px">
                         <div class="proedu-dialog-topbg topbg3">
                             <p class="proedu-dialog-title">飞天实训</p>
                             <p class="proedu-dialog-content">飞天实训系列产品，面向有志于从事IT行业的大学毕业生，以培养高素质、专技能、会学习、快适应的技能型IT工程师为目标，涵盖J2EE企业级开发、.NET企业级开发、大数据应用、云计算运维等技术方向，帮助大学生实现从毕业生到IT工程师的转型。
@@ -798,13 +798,8 @@
             $(".proedu-item-imgbox,.proedu-item-titlebox").on('mouseenter', function () {
                 $('.proedu-item-dialog').hide();
                 var coldom = $(this).parent();
-                var index = coldom.index();
                 var dialogDom = coldom.find('.proedu-item-dialog');
-                if (index == 1) {
-                    dialogDom.fadeIn();
-                } else {
-                    dialogDom.show();
-                }
+                dialogDom.fadeIn(500);
             })
             $(".proedu-item-dialog").on('mouseleave', function () {
                 $(this).fadeOut();
