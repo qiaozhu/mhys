@@ -61,14 +61,9 @@ a:hover {
 
 /* 导航begin */
 .mhys-nav {
-  position: absolute;
   background: transparent;
   width: 100%;
-  min-height: 100px;
   margin-bottom: 0;
-  border: 0;
-  top: 0;
-  z-index: 6;
 }
 
 .navbar-default .navbar-toggle:focus,
@@ -96,21 +91,21 @@ a:hover {
 
 .mhys-nav.navbar-default .navbar-nav > li > a:focus,
 .mhys-nav.navbar-default .navbar-nav > li > a:hover {
-  color: #f08300;
+  color: #005bac;
   background-color: transparent;
 }
 
 .mhys-nav.navbar-default .navbar-nav > .active > a,
 .mhys-nav.navbar-default .navbar-nav > .active > a:focus,
 .mhys-nav.navbar-default .navbar-nav > .active > a:hover {
-  color: #f08300;
+  color: #005bac;
   background-color: transparent;
 }
 
 .mhys-nav.navbar-default .navbar-nav > .open > a,
 .mhys-nav.navbar-default .navbar-nav > .open > a:focus,
 .mhys-nav.navbar-default .navbar-nav > .open > a:hover {
-  color: #f08300;
+  color: #005bac;
   background-color: transparent;
 }
 
@@ -122,7 +117,7 @@ a:hover {
     float: right;
   }
   .navbar-default .navbar-nav > li > a {
-    color: #ffffff;
+    color: #2a333c;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -132,12 +127,11 @@ a:hover {
   .mhys-nav .nav > li > a {
     padding-top: 0px;
     padding-bottom: 0px;
-    font-size: 18px;
-    margin-top: 36px;
+    font-size: 15px;
+    margin-top: 37px;
   }
   .mhys-main-banner .cover-image {
     width: 100%;
-    margin-top: -100px;
   }
 }
 
@@ -350,4 +344,19 @@ a:hover {
 }
 .back-to-top span {
   vertical-align: middle;
+}
+
+/* 图片排列 */
+.mhys-nav {
+  position: static;
+}
+
+.coontent-imglist {
+  width: 100%;
+  max-width: 1300px;
+  margin: 40px auto 80px;
+}
+
+.coontent-imglist img {
+  width: 100%;
 }

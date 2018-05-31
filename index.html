@@ -18,14 +18,14 @@
     <link href="./js/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="./js/owl.carousel/assets/owl.theme.default.min.css" rel="stylesheet">
     <link href="./css/video-js.min.css" rel="stylesheet">
-    <!-- <link href="./css/hover.min.css" rel="stylesheet" />-->
     <link href="./css/animate.css" rel="stylesheet" />
     <link href="./css/reset.css" rel="stylesheet" />
-    <link href="./css/common.css" rel="stylesheet" />
+    <link href="./css/common1.css" rel="stylesheet" />
     <link href="./css/index.css" rel="stylesheet" />
 </head>
 
 <body>
+    <!-- 头部begin -->
     <div class="mhys-main-banner">
         <div class="video-ready-bg aspectration" data-ratio="1280:719">
             <img src="./image/megvii_video.jpg">
@@ -38,7 +38,6 @@
                 您的浏览器不支持播放视频，请更新至最新版本。建议使用chrome浏览器。
             </p>
         </video>
-        <!-- <img src="./image/index-banner.jpg" alt=""> -->
         <nav class="navbar navbar-default mhys-nav">
             <div class="container">
                 <div class="navbar-header">
@@ -49,7 +48,6 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <!-- <a class="navbar-brand" href="#"  target="_self">Brand</a> -->
                     <img class="navbar-brand mhys-brand" src="./image/logo-white.png">
                 </div>
 
@@ -172,7 +170,9 @@
         </nav>
         <!-- <img src="./image/index-banner.jpg" class="cover-image" alt=""> -->
     </div>
+    <!-- 头部end -->
 
+    <!-- 内容区begin -->
     <div class="mhys-module module-product">
         <div class="mhys-module-title">
             <h2>产品方案
@@ -398,7 +398,6 @@
             </div>
         </div>
     </div>
-
     <div class="mhys-module module-news">
         <div class="mhys-module-title">
             <h2>新闻动态
@@ -556,7 +555,9 @@
             </div>
         </div>
     </div>
-    </div>
+    <!-- 内容区end -->
+
+    <!-- 底部begin -->
     <footer class="footer-panel">
         <div class="container text-center">
             <div class="row footer-link">
@@ -742,23 +743,19 @@
             </div>
         </div>
     </div>
+    <!-- 返回顶部 -->
     <div id="backtop" class="back-to-top">
         <span class="glyphicon  glyphicon glyphicon-menu-up" aria-hidden="true"></span>
     </div>
+    <!-- 底部end -->
+
+
     <script src="./js/jquery-2.1.4.min.js "></script>
     <script src="./js/bootstrap.min.js "></script>
-    <!-- <script src="./js/bootstrap-hover-dropdown.js"></script> -->
     <script src="./js/owl.carousel/owl.carousel.min.js "></script>
     <script src="./js/video.min.js"></script>
     <script type="text/javascript">
         $(function () {
-            // 头部视频
-            // var player = videojs('my-player', { autoplay: true }, function () {
-            //     // 准备就绪 隐藏默认图片 开始播放视频
-            //     console.log('video to go!');
-            //     $('.video-ready-bg').hide();
-            //     this.play();
-            // });
             // 导航hover
             var timer = null;
             $(".mhys-toggle").on('mouseenter', function () {
@@ -817,6 +814,7 @@
                 $(window).scrollTop(0);
             })
         })
+        // 合作伙伴轮播
         $(document).ready(function () {
             $('#owl-partner').owlCarousel({
                 items: 7,
