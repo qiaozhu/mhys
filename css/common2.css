@@ -130,11 +130,11 @@ a:hover {
     font-size: 15px;
     margin-top: 37px;
   }
-  .mhys-main-banner .cover-image {
-    width: 100%;
-  }
 }
 
+.mhys-main-banner .cover-image {
+  width: 100%;
+}
 .hover_nav.dropdown-menu {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -350,11 +350,16 @@ a:hover {
 .mhys-nav {
   position: static;
 }
-
 .coontent-imglist {
   width: 100%;
   max-width: 1300px;
   margin: 40px auto 80px;
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .coontent-imglist {
+    padding: 0;
+  }
 }
 
 .coontent-imglist img {
