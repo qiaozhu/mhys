@@ -364,4 +364,8 @@ a:hover {
 
 .coontent-imglist img {
   width: 100%;
+  margin-bottom: 60px;
+}
+.coontent-imglist img.bg-gray {
+  background: #efefef;
 }
